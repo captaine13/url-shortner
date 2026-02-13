@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Mini URL Shortener</title>
+    <link rel="icon" href="url.ico" type="image/icon type">
+
+    <!-- App styles and JavaScript -->
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<main class="app-shell">
+    <!-- Main card: create a short link -->
+    <section class="card card--main">
+        <p class="eyebrow">Beginner Project</p>
+        <h1>Mini URL Shortener</h1>
+        <p class="subtitle">Built with plain HTML, CSS, and JavaScript.</p>
+
+        <!-- Form for creating a short link -->
+        <form id="shorten-form" class="form">
+            <label for="long-url">Long URL</label>
+            <input id="long-url" type="text" placeholder="https://example.com/my/very/long/link" required>
+
+            <label for="custom-code">Custom short code (optional)</label>
+            <input id="custom-code" type="text" maxlength="20" placeholder="my-link">
+
+            <button type="submit">Create Short Link</button>
+        </form>
+
+        <!-- Status text (success/error/help messages) -->
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+
+        <!-- Result area shown after creating a link -->
+        <section id="result-box" class="result hidden">
+            <label for="short-link">Your short link</label>
+            <div class="result__row">
+                <input id="short-link" type="text" readonly>
+                <button id="copy-btn" type="button">Copy</button>
+            </div>
+        </section>
+    </section>
+</main>
+</body>
+</html>

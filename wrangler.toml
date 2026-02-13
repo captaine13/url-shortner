@@ -1,0 +1,2 @@
+name = "mini-url-shortener"
+pages_build_output_dir = "public"

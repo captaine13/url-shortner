@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+/* ---------------------------------
+   1) Theme variables (colors/tokens)
+---------------------------------- */
+:root {
+    --background: #f4f6ed;
+    --card: #ffffff;
+    --text: #172314;
+    --muted: #5c6957;
+    --line: #d5dfcf;
+    --primary: #3d8a56;
+    --primary-dark: #2f6e45;
+    --danger: #b0474d;
+}
+
+/* ---------------------------------
+   2) Global reset
+---------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------
+   3) Page background and base text
+---------------------------------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Outfit", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 10% 8%, #d5f4d1 0%, transparent 28%),
+        radial-gradient(circle at 88% 92%, #f8dcb6 0%, transparent 30%),
+        var(--background);
+}
+
+/* ---------------------------------
+   4) Main app layout
+---------------------------------- */
+.app-shell {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ---------------------------------
+   5) Reusable card container
+---------------------------------- */
+.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1.25rem;
+    box-shadow: 0 14px 34px rgba(57, 74, 51, 0.09);
+}
+
+/* Entry animation for each card */
+.card--main {
+    animation: slide-up 0.45s ease-out;
+}
+
+/* ---------------------------------
+   6) Typography sections
+---------------------------------- */
+.eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.73rem;
+    color: var(--muted);
+}
+
+/* Headings use a separate font for emphasis */
+h1 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+    margin: 0.2rem 0 0.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.subtitle {
+    margin: 0 0 1rem;
+    color: var(--muted);
+}
+
+/* ---------------------------------
+   7) Forms and input controls
+---------------------------------- */
+.form {
+    display: grid;
+    gap: 0.6rem;
+}
+
+/* Shared input/button typography and border setup */
+label {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+input,
+button {
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    font-family: "Outfit", sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Text input field styling */
+input {
+    width: 100%;
+    padding: 0.75rem 0.8rem;
+    background: #f9fcf8;
+}
+
+/* Focus ring helps keyboard and accessibility */
+input:focus {
+    outline: none;
+    border-color: #a8c3a1;
+    box-shadow: 0 0 0 3px rgba(117, 175, 133, 0.25);
+}
+
+/* Primary action button */
+button {
+    padding: 0.78rem 0.9rem;
+    background: linear-gradient(145deg, var(--primary), var(--primary-dark));
+    color: #eef9ef;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.16s ease, filter 0.16s ease;
+}
+
+/* Hover feedback for buttons */
+button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.04);
+}
+
+/* ---------------------------------
+   8) Status and result area
+---------------------------------- */
+.status {
+    min-height: 1.2em;
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.status--success {
+    color: #2f7e41;
+}
+
+.status--error {
+    color: var(--danger);
+}
+
+/* Generated link area (hidden until a link is created) */
+.result {
+    margin-top: 0.8rem;
+    border-top: 1px solid var(--line);
+    padding-top: 0.8rem;
+}
+
+/* Utility class to hide content */
+.hidden {
+    display: none;
+}
+
+/* Align generated link + copy button in one row */
+.result__row {
+    display: flex;
+    gap: 0.55rem;
+}
+
+/* Monospace-like visual style for short links */
+#short-link {
+    flex: 1;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+#copy-btn {
+    width: 110px;
+}
+
+/* ---------------------------------
+   9) Animation
+---------------------------------- */
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
