@@ -1,8 +1,8 @@
 // ---------------------------------
 // 1) App constants
 // ---------------------------------
-const STORAGE_KEY = "mini-url-shortener.links.v1";
-const SHORT_DOMAIN = `${window.location.origin}/`;
+const STORAGE_KEY = "caply.links.v1";
+const SHORT_DOMAIN = "https://cap-ly.com/";
 
 // ---------------------------------
 // 2) Grab important DOM elements

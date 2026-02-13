@@ -1,12 +1,12 @@
 {
-  "name": "mini-url-shortener",
+  "name": "surl",
   "version": "1.0.0",
   "private": true,
   "description": "Beginner-friendly URL shortener demo using HTML, CSS, and JavaScript.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "deploy:cloudflare": "npx wrangler pages deploy public --project-name mini-url-shortener"
+    "deploy:cloudflare": "npx wrangler pages deploy public --project-name surl"
   },
   "keywords": [
     "url-shortener",

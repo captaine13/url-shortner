@@ -84,5 +84,5 @@ const server = http.createServer(async (req, res) => {
 // 8) Start server
 // ------------------------------
 server.listen(port, () => {
-    console.log(`Mini URL Shortener running at http://localhost:${port}`);
+    console.log(`surl running at http://localhost:${port}`);
 });
