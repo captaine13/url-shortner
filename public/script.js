@@ -2,7 +2,7 @@
 // 1) App constants
 // ---------------------------------
 const STORAGE_KEY = "caply.links.v1";
-const SHORT_DOMAIN = "https://cap-ly.com/";
+const SHORT_DOMAIN = "cap-ly.com/";
 
 // ---------------------------------
 // 2) Grab important DOM elements
